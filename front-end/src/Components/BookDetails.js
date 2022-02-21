@@ -17,7 +17,7 @@ function BookDetails() {
       }).catch((err)=>{
         console.log(err);
       })
-  }, [id, API]);
+  }, [id]);
 
   const handleDelete=()=>{
     axios.delete(API + "/books/" + id)
@@ -30,7 +30,7 @@ function BookDetails() {
 
   return <article>
     <aside>
-      <h4>the book health</h4>
+      <h4>the book new or old</h4>
       <ContentHealth bookHealth={book.featured}/>
     </aside>
     <div>
@@ -39,9 +39,9 @@ function BookDetails() {
         <img src={book.image} alt={book.name} />
         <h6>Author: {book.author}</h6>
         <h6>Description: {book.description}</h6>
-        <h6>Price: {book.price}</h6>
+        <h6>Price: ${book.price}</h6>
         <h6>Rating: {book.rating}</h6>
-        <h6>Featured: {book.featured}</h6>
+        <h6>Featured: {book.featured ? "True" : "False"}</h6>
       </div>
       <div className="showNavigation">
         <div>

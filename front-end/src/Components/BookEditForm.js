@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -39,7 +39,7 @@ function BookEditForm() {
     axios.get(`${API}/books/${id}`).then(
       (response) => setBook(response.data)
     ).catch(()=>navigate("/not-found "))
-  }, [id]);
+  }, [id, navigate]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -91,6 +91,7 @@ function BookEditForm() {
           id="rating"
           type="number" min="0" max="5" step="1"
           value={book.rating}
+          onChange={handleTextChange}
           required
         />
         <label htmlFor="featured">Featured:</label>

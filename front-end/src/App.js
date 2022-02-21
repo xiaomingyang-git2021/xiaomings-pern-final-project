@@ -2,7 +2,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // PAGES
+import Edit from "./Pages/Edit";
+import FourOFour from "./Pages/FourOFour";
 import Home from "./Pages/Home";
+import Index from "./Pages/Index";
+import New from "./Pages/New";
+import Show from "./Pages/Show";
 
 
 // COMPONENTS
@@ -15,8 +20,12 @@ function App() {
         <NavBar />
         <main>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route exact path="/" element={<Home />} />
             <Route path="/books" element={<Index />} />
+            <Route path="/books/new" element={<New />} />
+            <Route path="/books/:id" element={<Show />} />
+            <Route path="/books/:id/edit" element={<Edit />} />
+            <Route path="/*" element={<FourOFour />} />
           </Routes>
         </main>
       </Router>
