@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import Button from "react-bootstrap/esm/Button";
 import { useNavigate } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
@@ -84,7 +85,7 @@ function BookNewForm() {
         <label htmlFor="rating">Rating:</label>
         <input
           id="rating"
-          type="number" min="0" max="5" step="1"
+          type="number" min="0" max="5" step="0.5"
           value={book.rating}
           onChange={handleTextChange}
           required
@@ -98,7 +99,7 @@ function BookNewForm() {
         />
 
         <br />
-        <input type="submit" />
+        <Button variant="primary" type="submit">Submit</Button>
       </form>
     </div>
   );

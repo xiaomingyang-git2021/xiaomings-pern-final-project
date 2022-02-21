@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import ContentHealth from "./ContentHealth";
+import Button from "react-bootstrap/Button";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -33,12 +34,12 @@ function BookDetails() {
       <h4>the book new or old</h4>
       <ContentHealth bookHealth={book.featured}/>
     </aside>
-    <div>
+    <div className="Show">
       <div>
         <h5>{book.name}</h5>
         <img src={book.image} alt={book.name} />
         <h6>Author: {book.author}</h6>
-        <h6>Description: {book.description}</h6>
+        <h6 className="description">Description: {book.description}</h6>
         <h6>Price: ${book.price}</h6>
         <h6>Rating: {book.rating}</h6>
         <h6>Featured: {book.featured ? "True" : "False"}</h6>
@@ -46,16 +47,16 @@ function BookDetails() {
       <div className="showNavigation">
         <div>
           <Link to="/books">
-            <button>Back</button>
+            <Button variant="primary">Back</Button>
           </Link>
         </div>
         <div>
           <Link to={`/books/${id}/edit`}>
-            <button>Edit</button>
+            <Button variant="primary">Edit</Button>
           </Link>
         </div>
         <div>
-          <button onClick={handleDelete}>Delete</button>
+          <Button variant="primary" onClick={handleDelete}>Delete</Button>
         </div>
       </div>
     </div>

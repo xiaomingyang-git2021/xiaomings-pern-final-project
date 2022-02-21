@@ -1,4 +1,5 @@
 import axios from "axios";
+import Button from 'react-bootstrap/Button';
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
@@ -89,7 +90,7 @@ function BookEditForm() {
         <label htmlFor="rating">Rating:</label>
         <input
           id="rating"
-          type="number" min="0" max="5" step="1"
+          type="number" min="0" max="5" step="0.5"
           value={book.rating}
           onChange={handleTextChange}
           required
@@ -103,7 +104,7 @@ function BookEditForm() {
         />
 
         <br />
-        <input type="submit" />
+        <Button variant="success" class="btn-sm" type="submit">Submit</Button>
       </form>
     </div>
   )

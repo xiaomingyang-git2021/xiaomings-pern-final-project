@@ -6,8 +6,8 @@ function Book({ book }) {
     <div className="Book">
       <img src={book.image} alt={book.name}/>
       <Link to={`/books/${book.id}`}>
-        <h4 className="book-featured"><ContentHealth bookHealth={book.featured} /> <div>{book.name}</div></h4>
-        {/* <h4></h4> */}
+        <h4>{book.name}</h4>
+        <h4 className="book-featured"><ContentHealth bookHealth={book.featured}/></h4>
       </Link>
     </div>
   )
