@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 function ReviewForm(props) {
   let { id } = useParams();
@@ -81,7 +82,7 @@ function ReviewForm(props) {
 
         <br />
 
-        <input type="submit" />
+        <Button variant="success" type="submit">Submit</Button>
       </form>
     </div>
   );

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ReviewForm from "./ReviewForm";
+import Button from "react-bootstrap/Button";
 
 function Review({ review, handleDelete, handleSubmit }) {
   const [viewEditForm, toggleEditForm] = useState(false);
@@ -10,7 +11,7 @@ function Review({ review, handleDelete, handleSubmit }) {
 
   return (
     <div className="Review">
-      <button onClick={toggleView}>edit this review</button>
+      <Button variant="primary" onClick={toggleView}>edit this review</Button>
       {
         viewEditForm ? (
           <ReviewForm
@@ -25,7 +26,7 @@ function Review({ review, handleDelete, handleSubmit }) {
             </h4>
             <h5>{review.reviewer}</h5>
             <p>{review.content}</p>
-            <button onClick={() => handleDelete(review.id)}>delete</button>
+            <Button variant="primary" onClick={() => handleDelete(review.id)}>delete</Button>
           </div>
         )
       }

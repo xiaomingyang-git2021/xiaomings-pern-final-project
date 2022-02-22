@@ -1,9 +1,13 @@
+const reviewsController = require("./reviewsController.js");
+
 const express = require("express");
 const books = express.Router();
 const { getAllBooks, getBook, createBook, deleteBook, updateBook } = require("../queries/books.js");
-const { checkName, checkFavorite } = require("../validations/checkBooks.js")
+const { checkName, checkFavorite } = require("../validations/checkBooks.js");
+const reviews = require("./reviewsController.js");
 
 
+books.use("/:bookId/reviews", reviews);
 books.get("/", async (req, res) => {
   try{
     const allBooks = await getAllBooks();

@@ -33,6 +33,7 @@ const newReview = async (review) => {
         review.book_id,
       ]
     );
+    return newReview;
   } catch (error) {
     return error;
   }
