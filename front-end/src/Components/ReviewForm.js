@@ -12,6 +12,16 @@ function ReviewForm(props) {
     rating: "",
     book_id: id,
   });
+
+  const handleTextChange = (event) => {
+    setReview({ ...review, [event.target.id]: event.title.value });
+  };
+
+  useEffect(() => {
+    if (reviewDetails) {
+      setReview(reviewDetails);
+    }
+  }, [id, reviewDetails, props]);
 };
 
 export default ReviewForm;
