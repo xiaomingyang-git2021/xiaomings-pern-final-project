@@ -14,7 +14,7 @@ require("dotenv").config();
 
 // ROUTES
 app.get("/", (req, res) => {
-  res.send("Welcome to Online Bestseller Bookstore");
+  res.send("Welcome to Book Bin");
 });
 
 app.use("/books", bookController);
