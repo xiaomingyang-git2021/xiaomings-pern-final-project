@@ -149,3 +149,7 @@ input[type=number] {
   box-shadow: 15px 15px 5px olive;
   margin-top: 100px;
 }
+
+.Books {
+  display: flex;
+}

@@ -31,7 +31,7 @@ function BookDetails() {
 
   return <article>
     <aside>
-      <h4>the book new or old</h4>
+      <h4>the book hard cover or not</h4>
       <ContentHealth bookHealth={book.featured}/>
     </aside>
     <div className="Show">
