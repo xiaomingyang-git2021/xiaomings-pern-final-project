@@ -61,6 +61,23 @@ function Reviews() {
       })
       .catch((c) => console.warn("catch", c));
   };
+
+  return (
+    <section className="Reviews">
+      <h2>Reviews</h2>
+      <ReviewForm handleSubmit={handleAdd}>
+        <h3>Add a New Review</h3>
+      </ReviewForm>
+      {reviews.map((review) => (
+        <Review
+          key={review.id}
+          review={review}
+          handleSubmit={handleEdit}
+          handleDelete={handleDelete}
+        />
+      ))}
+    </section>
+  );
 }
 
 export default Reviews;
