@@ -22,6 +22,21 @@ function ReviewForm(props) {
       setReview(reviewDetails);
     }
   }, [id, reviewDetails, props]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.handleSubmit(review, id);
+    if (reviewDetails) {
+      props.toggleView();
+    }
+    setReview({
+      reviewer: "",
+      title: "",
+      content: "",
+      rating: "",
+      book_id: id,
+    });
+  };
 };
 
 export default ReviewForm;
