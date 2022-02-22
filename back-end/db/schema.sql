@@ -21,3 +21,16 @@ CREATE TABLE books (
   CHECK (rating >=0 AND rating <= 5),
   featured BOOLEAN
 );
+
+DROP TABLE IF EXISTS reviews;
+
+CREATE TABLE reviews (
+  id SERIAL PRIMARY KEY,
+  reviewer TEXT,
+  title TEXT,
+  content TEXT,
+  rating NUMERIC,
+  CHECK (rating >= 0 AND rating <= 5),
+  book_id INTEGER REFERENCES books (id)
+  ON DELETE CASCADE
+);
