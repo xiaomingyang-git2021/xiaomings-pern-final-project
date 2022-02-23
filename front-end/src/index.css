@@ -193,3 +193,9 @@ textarea[type=text] {
   /* background-color: blue; */
   border-radius: 8px;
 }
+
+.Home {
+  background-image: url(https://media.npr.org/assets/img/2021/12/02/maureen-corrigan-reads-1_wide-e615c2a00bea413867488f80493e523a08b9ec88.jpg);
+  height: 800px;
+  width: 100%;
+}

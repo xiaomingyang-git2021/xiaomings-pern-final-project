@@ -9,7 +9,7 @@ function Book({ book }) {
         <h4>{book.name}</h4>
         <h4 className="book-featured"><ContentHealth bookHealth={book.featured}/></h4>
       </Link>
-    </div>
+    </div>   
   )
 }
 

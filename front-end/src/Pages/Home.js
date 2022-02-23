@@ -1,8 +1,8 @@
 function Home() {
   return (
-    <div>
+    <div className="Home">
       <h2>Welcome </h2>
-      <h3>To Online Bestseller Bookstore</h3>
+      <h3>To Book Bin</h3>
     </div>
   );
 }
