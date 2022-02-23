@@ -15,7 +15,7 @@ function ReviewForm(props) {
   });
 
   const handleTextChange = (event) => {
-    setReview({ ...review, [event.target.id]: event.title.value });
+    setReview({ ...review, [event.target.id]: event.target.value });
   };
 
   useEffect(() => {

@@ -19,7 +19,7 @@ function Reviews() {
 
   const handleAdd = (newReview) => {
     axios
-      .post(`$(API)/books/${id}/reviews`,
+      .post(`${API}/books/${id}/reviews`,
       newReview)
       .then(
         (response) => {
