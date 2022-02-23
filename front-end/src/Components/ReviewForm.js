@@ -82,7 +82,7 @@ function ReviewForm(props) {
 
         <br />
 
-        <Button variant="success" type="submit">Submit</Button>
+        <Button variant="success" size="sm" type="submit">Submit</Button>
       </form>
     </div>
   );

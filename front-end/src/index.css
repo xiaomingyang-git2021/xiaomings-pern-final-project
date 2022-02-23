@@ -172,9 +172,11 @@ textarea[type=text] {
 
 .Reviews {
   background-color: whitesmoke;
+  width: 100%;
   padding: 1em;
-  box-shadow: 10px 15px 4px silver;
-  border-radius: 10px;
+  box-shadow: 10px 10px 15px gray;
+  border-radius: 15px;
+  margin-bottom: 200px;
 }
 
 .Reviews > div {

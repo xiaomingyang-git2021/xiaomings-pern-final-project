@@ -48,16 +48,16 @@ function BookDetails() {
       <div className="showNavigation">
         <div>
           <Link to="/books">
-            <Button variant="primary">Back</Button>
+            <Button variant="primary" size="sm">Back</Button>
           </Link>
         </div>
         <div>
           <Link to={`/books/${id}/edit`}>
-            <Button variant="primary">Edit</Button>
+            <Button variant="primary" size="sm">Edit</Button>
           </Link>
         </div>
         <div>
-          <Button variant="primary" onClick={handleDelete}>Delete</Button>
+          <Button variant="warning" size="sm" onClick={handleDelete}>Delete</Button>
         </div>
       </div>
     </div>
