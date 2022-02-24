@@ -31,10 +31,10 @@ function BookDetails() {
   }
 
   return <article>
-    <aside>
+    {/* <aside>
       <h4>the book hard cover or not</h4>
       <ContentHealth bookHealth={book.featured}/>
-    </aside>
+    </aside> */}
     <div className="Show">
       <div>
         <h5>{book.name}</h5>
