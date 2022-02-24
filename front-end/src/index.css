@@ -16,7 +16,6 @@ body {
   font-family: 'Thasadith', sans-serif;
   font-size: 35px;
   background: url("https://i.pinimg.com/originals/70/46/21/704621f1d7ff85014faf04e35dbcaaf9.jpg") no-repeat center center;
-  /* background: url("https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg") no-repeat center center fixed;  */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -195,7 +194,8 @@ textarea[type=text] {
 }
 
 .Home {
-  background-image: url(https://media.npr.org/assets/img/2021/12/02/maureen-corrigan-reads-1_wide-e615c2a00bea413867488f80493e523a08b9ec88.jpg);
+  /* background-image: url(https://media.npr.org/assets/img/2021/12/02/maureen-corrigan-reads-1_wide-e615c2a00bea413867488f80493e523a08b9ec88.jpg); */
   height: 800px;
   width: 100%;
+  filter: blur(12px);
 }
