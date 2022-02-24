@@ -25,7 +25,7 @@ function Review({ review, handleDelete, handleSubmit }) {
             </h4>
             <h5>{review.reviewer}</h5>
             <p>{review.content}</p>
-            <Button variant="primary" size="sm" onClick={toggleView}>edit this review</Button>{' '}
+            <Button variant="primary" size="sm" onClick={toggleView}>edit this review</Button>{' '}&nbsp;&nbsp;&nbsp;
             <Button variant="warning" size="sm" onClick={() => handleDelete(review.id)}>delete</Button>
           </div>
         )
